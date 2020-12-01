@@ -15,7 +15,7 @@ function Post({username, caption,imageUrl}) {
         </div> 
       {/* header => avatar + usernama */}
        
-       <img className="post__image" src="https://www.linkpicture.com/q/pexels-amit-kumar-2215380.jpg" alt="ss"/>
+       <img className="post__image" src={imageUrl} alt="insta"/>
        {/* image */}
        
     <h4 className="post__text"><strong>{username}</strong> {caption} </h4>
