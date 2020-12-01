@@ -1,8 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './App.css';
 import Post from './Post';
 
 function App() {
+  const [posts,setPosts] = useState([
+    {
+      username:"bedrantirak",
+      caption:"Amazing insta day.",
+     imageUrl:"https://www.linkpicture.com/q/pexels-amit-kumar-2215380.jpg"
+    },
+    {
+      username:"hascatrk",
+      caption:"Amazing insta day.",
+     imageUrl:"https://www.linkpicture.com/q/pexels-amit-kumar-2215380.jpg"
+    }
+  ]);
+
   return (
     <div className="App">
      {/* header */}
@@ -13,13 +26,13 @@ function App() {
       />
     </div>
     <h1>Clone Insta</h1>
-
-    <Post username="bedrantirak" caption="Amazing insta day." imageUrl="https://prnt.sc/vtf22e" />
-    <Post />
-    <Post />
-    <Post />
-     {/* Posts */}
-     {/* Posts */}
+      {
+        posts.map(post =>(
+          <Post username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
+        ))
+      }
+   
+    
     </div>
   );
 }
