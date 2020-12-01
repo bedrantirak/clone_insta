@@ -14,6 +14,9 @@ function App() {
     </div>
     <h1>Clone Insta</h1>
 
+    <Post username="bedrantirak" caption="Amazing insta day." imageUrl="https://prnt.sc/vtf22e" />
+    <Post />
+    <Post />
     <Post />
      {/* Posts */}
      {/* Posts */}
