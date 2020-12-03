@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './App.css';
 import Post from './Post';
+import {db} from "./firebase"
+
 
 function App() {
   const [posts,setPosts] = useState([
@@ -15,6 +17,15 @@ function App() {
      imageUrl:"https://www.linkpicture.com/q/pexels-amit-kumar-2215380.jpg"
     }
   ]);
+
+  //useEffect => exp: run code when page refreshes. runs a piece of code based on a specific condition
+  
+  useEffect(()=>{
+  db.collection('posts').onSnapshot(snapshot =>{
+    setPosts(snapshot.docs.map(doc => doc.data()))
+  })
+  //everytime a new post added
+},[]);
 
   return (
     <div className="App">
