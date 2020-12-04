@@ -4,6 +4,7 @@ import Post from './Post';
 import {db, auth} from "./firebase"
 import { Button, Modal, Input} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import ImageUpload from './ImageUpload';
 
 
 
@@ -98,6 +99,7 @@ const signIn = (event) =>{
 
   return (
     <div className="App">
+    <ImageUpload />
 
 <Modal
      open={openSignIn}
