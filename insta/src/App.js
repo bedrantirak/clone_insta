@@ -99,7 +99,7 @@ const signIn = (event) =>{
 
   return (
     <div className="App">
-    <ImageUpload />
+    <ImageUpload username={user.displayName} />
 
 <Modal
      open={openSignIn}
