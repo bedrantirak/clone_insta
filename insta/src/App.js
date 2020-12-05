@@ -69,9 +69,9 @@ function App() {
 
 
   useEffect(()=>{
-  db.collection('posts').onSnapshot(snapshot =>{
+  db.collection('posts').orderBy('timestamp', 'desc').onSnapshot(snapshot =>{
     setPosts(snapshot.docs.map(doc => ({
-      id: doc.id,
+      id: doc.id, 
       post: doc.data()
     })))
   })
@@ -104,7 +104,7 @@ const signIn = (event) =>{
 
     ):(
       <h3>
-       Sorry you need to sign in to image upload!
+       Sign In for upload image now!
       </h3>
     )}
     
