@@ -98,8 +98,16 @@ const signIn = (event) =>{
 }
 
   return (
-    <div className="App">
-    <ImageUpload username={user.displayName} />
+    <div className="App">,
+    {user?.displayName ? (
+         <ImageUpload username={user.displayName} />
+
+    ):(
+      <h3>
+       Sorry you need to sign in to image upload!
+      </h3>
+    )}
+    
 
 <Modal
      open={openSignIn}
