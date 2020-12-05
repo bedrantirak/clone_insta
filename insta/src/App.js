@@ -5,6 +5,7 @@ import {db, auth} from "./firebase"
 import { Button, Modal, Input} from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import ImageUpload from './ImageUpload';
+import InstagramEmbed from "react-instagram-embed"
 
 
 
@@ -180,14 +181,14 @@ const signIn = (event) =>{
       </div>
       )}
     </div>
-   
-
-    <h1>Clone Insta </h1>
+      <div className="app__posts">
       {
         posts.map(({id, post}) =>(
           <Post key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
         ))
       }
+      </div>
+    
      
      {user?.displayName ? (
          <ImageUpload username={user.displayName} />
