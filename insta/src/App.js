@@ -182,13 +182,30 @@ const signIn = (event) =>{
       )}
     </div>
       <div className="app__posts">
-      {
+        <div className="app__postsLeft">
+        {
         posts.map(({id, post}) =>(
           <Post key={id} username={post.username} caption={post.caption} imageUrl={post.imageUrl} />
         ))
       }
+        </div>
+       <div className="app__postsRight">
+       <InstagramEmbed
+      url='https://wwww.instagram.com/p/B_uf9dmAGPw/'
+      maxWidth={320}
+      hideCaption={false}
+      containerTagName='div'
+      protocol=''
+      injectScript
+      onLoading= {()=> {}}
+      onAfterRender= {()=> {}}
+      onSuccess= {()=> {}}
+      onFailure= {()=> {}}
+      />
+       </div>
+      
       </div>
-    
+      
      
      {user?.displayName ? (
          <ImageUpload username={user.displayName} />
