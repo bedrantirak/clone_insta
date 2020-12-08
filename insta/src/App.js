@@ -143,7 +143,7 @@ const signIn = (event) =>{
       src="https://www.instagram.com/static/images/web/mobile_nav_type_logo.png/735145cfe0a4.png"
       alt="insta_logo"
       />
-       </center>
+       </center> 
       <Input type="text"
       placeholder="username"
       value={username}
