@@ -27,6 +27,9 @@
     display: flex;
     margin-top: 10px;
 }
+.post__comments{
+    padding: 20px;
+}
 .post__input{
     flex: 1;
     border:none;
